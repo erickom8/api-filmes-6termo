@@ -1,0 +1,25 @@
+@url = https://orange-xylophone-w6w7jpww7gjh597w-8080.app.github.dev/generos
+
+POST {{url}}
+Content-Type: application/json
+
+{
+    "nome" : "Comédia"  
+}
+
+###
+GET {{url}}
+
+###
+PUT {{url}}/4
+Content-Type: application/json
+
+{
+    "nome" : "Comedia"
+}
+
+###
+DELETE {{url}}/3
+
+###
+GET {{url}}/3
