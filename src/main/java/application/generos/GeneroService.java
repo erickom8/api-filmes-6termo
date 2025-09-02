@@ -1,4 +1,4 @@
-package application.services;
+package application.generos;
 
 import java.util.Optional;
 
@@ -7,10 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import application.model.Genero;
-import application.record.GeneroDTO;
-import application.record.GeneroInsertDTO;
-import application.repository.GeneroRepository;
 
 @Service
 public class GeneroService {

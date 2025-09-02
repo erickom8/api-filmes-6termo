@@ -4,18 +4,18 @@ POST {{url}}
 Content-Type: application/json
 
 {
-    "nome" : "Comédia"  
+    "nome" : "Suspense"  
 }
 
 ###
 GET {{url}}
 
 ###
-PUT {{url}}/4
+PUT {{url}}/1
 Content-Type: application/json
 
 {
-    "nome" : "Comedia"
+    "nome" : "Comédia"
 }
 
 ###
