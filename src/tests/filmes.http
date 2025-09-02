@@ -1,0 +1,21 @@
+@url = https://orange-xylophone-w6w7jpww7gjh597w-8080.app.github.dev
+
+GET {{url}}/filmes
+
+###
+POST {{url}}/filmes
+Content-Type: application/json
+
+{
+    "titulo": "It - a Coisa",
+    "idGenero": 4
+}
+
+###
+PUT {{url}}/filmes/3
+Content-Type: application/json
+
+{
+    "titulo": "It a Coisa",
+    "idGenero": 2
+}
