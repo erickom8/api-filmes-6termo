@@ -49,6 +49,26 @@ public class FilmeService{
         return new FilmeDTO(filmeRepo.save(resultado.get()));   
     
     }
+    public FilmeDTO getOne(long id){
+        Optional<Filme> resultado = filmeRepo.findById(id);        
 
+        if (resultado.isEmpty()){
+            throw new ResponseStatusException(
+                HttpStatus.NOT_FOUND, "Filme não encontrado"
+            );
+        }
+
+        return new FilmeDTO(resultado.get());
+    }
+
+    public void delete(long id) {
+        if(!filmeRepo.existsById(id)) {
+            throw new ResponseStatusException(
+                HttpStatus.NOT_FOUND, "Filme não encontrado"
+            );
+        }
+        
+        filmeRepo.deleteById(id);
+    }
 
 }

@@ -3,6 +3,9 @@
 GET {{url}}/filmes
 
 ###
+GET {{url}}/filmes/3
+
+###
 POST {{url}}/filmes
 Content-Type: application/json
 
@@ -19,3 +22,6 @@ Content-Type: application/json
     "titulo": "It a Coisa",
     "idGenero": 2
 }
+
+###
+DELETE {{url}}/filmes/3

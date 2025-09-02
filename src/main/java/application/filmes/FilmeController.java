@@ -1,6 +1,7 @@
 package application.filmes;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,6 +31,14 @@ public class FilmeController {
         return this.filmeService.update(id, novosDadosFilme);
     }
 
-    // @GetMapping("/{id}")
+    @GetMapping("/{id}")
+    public FilmeDTO getOne(@PathVariable long id){
+        return this.filmeService.getOne(id);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable long id) {
+        this.filmeService.delete(id);
+    }
     
 }
