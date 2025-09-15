@@ -1,0 +1,22 @@
+@url = http://localhost:8080
+
+GET {{url}}/funcoes
+
+###
+POST {{url}}/funcoes
+Content-Type: application/json
+
+{
+    "descricao" : "Diretor/Diretora"
+}
+
+###
+PUT {{url}}/funcoes/1
+Content-Type: application/json
+
+{
+    "descricao" : "Diretor/Diretora"
+}
+
+###
+DELETE {{url}}/funcoes/1

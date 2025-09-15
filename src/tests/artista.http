@@ -1,0 +1,22 @@
+@url = http://localhost:8080
+
+GET {{url}}/artistas
+
+###
+POST {{url}}/artistas
+Content-Type: application/json
+
+{
+    "nome" : "Cate Blanchett"
+}
+
+###
+PUT {{url}}/artistas/2
+Content-Type: application/json
+
+{
+    "nome" : "Orlando Bloom"
+}
+
+###
+DELETE {{url}}/artistas/1

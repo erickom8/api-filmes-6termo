@@ -1,0 +1,26 @@
+@url = http://localhost:8080
+
+POST {{url}}/elencos
+Content-Type: application/json
+
+{
+    "idFilme" : 1,
+    "idArtista" : 3,
+    "idFuncao" : 2
+}
+
+###
+PUT {{url}}/elencos/1
+Content-Type: application/json
+
+{
+    "idFilme" : 1,
+    "idArtista" : 3,
+    "idFuncao" : 3
+}
+
+###
+GET {{url}}/elencos
+
+###
+DELETE {{url}}/elencos/2
