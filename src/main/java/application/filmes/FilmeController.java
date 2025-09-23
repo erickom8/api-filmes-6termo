@@ -15,24 +15,24 @@ import org.springframework.web.bind.annotation.RestController;
 public class FilmeController {
     @Autowired
     FilmeService filmeService;
-
+    
     @GetMapping
-    public Iterable<FilmeDTO> getAll(){
+    public Iterable<FilmeDTO> getAll() {
         return this.filmeService.getAll();
     }
 
     @PostMapping
-    public FilmeDTO insert(@RequestBody FilmeInsertDTO novoFilme) {
-        return this.filmeService.insert(novoFilme);
+    public FilmeDTO insert(@RequestBody FilmeInsertDTO dadosNovos) {
+        return this.filmeService.insert(dadosNovos);
     }
 
     @PutMapping("/{id}")
-    public FilmeDTO update(@PathVariable long id, @RequestBody FilmeInsertDTO novosDadosFilme) {
-        return this.filmeService.update(id, novosDadosFilme);
+    public FilmeDTO update(@PathVariable long id, @RequestBody FilmeInsertDTO dados) {
+        return this.filmeService.update(id, dados);
     }
 
     @GetMapping("/{id}")
-    public FilmeDTO getOne(@PathVariable long id){
+    public FilmeDTO getOne(@PathVariable long id) {
         return this.filmeService.getOne(id);
     }
 
@@ -40,5 +40,4 @@ public class FilmeController {
     public void delete(@PathVariable long id) {
         this.filmeService.delete(id);
     }
-    
 }

@@ -1,0 +1,25 @@
+@url = http://localhost:8080
+
+GET {{url}}/produtoras
+
+###
+POST {{url}}/produtoras
+Content-Type: application/json
+
+{
+    "nome" : "A24"
+}
+
+###
+GET {{url}}/produtoras/1
+
+###
+PUT {{url}}/produtoras/1
+Content-Type: application/json
+
+{
+    "nome" : "Paramount"
+}
+
+###
+DELETE {{url}}/produtoras/1
